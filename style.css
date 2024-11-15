@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #007ade;
+  --white: #fff;
+  --black: #000;
+  --gray: rgb(202, 202, 202);
+}
+
+body {
+  background: #000000;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 25px;
+  width: 100%;
+  z-index: 1000;
+}
+header img {
+  display: block;
+  width: 100%;
+}
+header .header__logo {
+  font-size: 30px;
+  color: white;
+}
+header .header__logo img {
+  max-width: 200px;
+  filter: invert(1);
+}
+header .header__menu {
+  position: relative;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url("./assets/menu-3-fill.png");
+  background-size: 30px;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+header .header__menu:hover {
+  background-color: var(--gray);
+}
+header .header__menu.active {
+  position: relative;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url("./assets/close-line.png");
+  background-size: 30px;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+header .header__year {
+  font-family: "Racing Sans One", sans-serif;
+  font-size: 1rem;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-weight: 800;
+}
+header::after {
+  position: absolute;
+  content: "";
+  top: 20%;
+  transform: translate(-50%);
+  left: 280px;
+  height: 5px;
+  width: 40%;
+  background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+.banner {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.banner::before {
+  position: absolute;
+  content: "";
+  top: 25%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  height: 40%;
+  background: linear-gradient(var(--primary), transparent);
+  z-index: 100;
+}
+.banner__nav {
+  z-index: 200;
+  position: absolute;
+  right: 100px;
+  top: 0;
+  width: 30%;
+  height: 5px;
+  border-bottom: 5px solid;
+  -o-border-image: linear-gradient(90deg, transparent, var(--primary), var(--primary)) 30;
+     border-image: linear-gradient(90deg, transparent, var(--primary), var(--primary)) 30;
+  background: transparent;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  transform-origin: right;
+}
+.banner__nav a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding: 8px 20px;
+  font-size: 10px;
+}
+.banner__nav.active {
+  top: 100px;
+  width: 40%;
+  height: 55px;
+  border-top: 5px solid;
+  border-bottom: none;
+  -o-border-image: linear-gradient(90deg, transparent, var(--primary), var(--primary), transparent) 30;
+     border-image: linear-gradient(90deg, transparent, var(--primary), var(--primary), transparent) 30;
+}
+.banner__nav.active li {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+  transition: 0.5s;
+  list-style: none;
+}
+.banner__nav.active li a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding: 8px 20px;
+  transition: all 1s;
+}
+.banner__nav.active li a:hover {
+  background: linear-gradient(90deg, transparent, var(--primary), var(--primary), transparent);
+}
+.banner__nav li {
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  transform: translateY(-100px);
+  transition: 0.5s;
+}
+.banner__bglist--item {
+  display: none;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner__bglist--item.active {
+  display: block;
+}
+.banner__bgcontent {
+  position: relative;
+  max-width: 700px;
+  padding-bottom: 150px;
+}
+.banner__bgcontent h1 {
+  font-family: "Racing Sans One", sans-serif;
+  font-size: 10rem;
+  color: var(--white);
+  font-weight: 500;
+  line-height: 9rem;
+  letter-spacing: 5px;
+}
+.banner__bgcontent p {
+  color: var(--white);
+  font-size: 200;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.banner__bgcontent a {
+  position: relative;
+  width: 200px;
+  color: var(--white);
+  text-decoration: none;
+  padding: 15px 50px;
+  background: transparent;
+  border-bottom: 3px solid;
+  -o-border-image: linear-gradient(90deg, transparent, var(--primary), var(--primary), transparent, 30);
+     border-image: linear-gradient(90deg, transparent, var(--primary), var(--primary), transparent, 30);
+  box-shadow: inset 0 0 10px var(--primary);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.banner__bgcontent a:hover {
+  box-shadow: inset 0 0 50px var(--primary);
+}
+.banner__bgcontent .model {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  display: none;
+}
+.banner__bgcontent .model.active {
+  display: block;
+}
+.banner__bgscreen {
+  position: absolute;
+  right: 10%;
+  bottom: 100px;
+  width: 300px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: animate 30s linear infinite;
+  z-index: 100;
+}
+.banner__bgscreen div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.banner__bgscreen div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(transparent, var(--primary));
+  transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+}
+.banner__bgscreen div video {
+  position: absolute;
+  bottom: 0;
+  height: 75%;
+  width: 100%;
+  transition: 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner__bgscreen .shadow {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200px;
+  background: var(--primary);
+  transform: rotateX(-90deg) rotateY(150px);
+  filter: blur(20px);
+  box-shadow: 0 0 120px rgba(0, 194, 222, 0.2), rgba(0, 194, 222, 0.4), rgba(0, 194, 222, 0.6), rgba(0, 194, 222, 0.8), rgb(0, 194, 222);
+}
+.banner__bgscreen .shadow .trailer {
+  display: none;
+}
+.banner__bgscreen .shadow .trailer .active {
+  display: block;
+}
+.banner__bggallery {
+  position: absolute;
+  content: "";
+  left: 100px;
+  bottom: 0;
+  width: 55%;
+  height: 30%;
+  z-index: 100;
+  background: transparent;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5), 0px -10px 40px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

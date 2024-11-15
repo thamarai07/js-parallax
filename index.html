@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <header class="header">
+      <span class="header__year">2023/2024</span>
+      <a href="" class="header__logo">
+        <img src="./assets/logo.png" alt=""
+      /></a>
+      <a
+        href="javascript:void(0)"
+        class="header__menu deactive"
+        role="button"
+        aria-pressed="false"
+      ></a>
+    </header>
+    <div class="banner">
+      <div class="banner__bglist">
+        <video
+          class="banner__bglist--item active"
+          src="./assets/videos/mclaren-1.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          class="banner__bglist--item"
+          src="./assets/videos/mclaren-2.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          class="banner__bglist--item"
+          src="./assets/videos/mclaren-3.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          class="banner__bglist--item"
+          src="./assets/videos/mclaren-4.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          class="banner__bglist--item"
+          src="./assets/videos/mclaren-5.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+      <div class="banner__bgcontent">
+        <h1>McLEARN</h1>
+        <h3 class="model mclearn-1 active">765 SPIDER</h3>
+        <h3 class="model mclearn-2" style="color: #92ff00">ATURA</h3>
+        <h3 class="model mclearn-3" style="color: #ff0015">750S</h3>
+        <h3 class="model mclearn-4" style="color: #ff2e00">765LT</h3>
+        <h3 class="model mclearn-5" style="color: #bbc0dd">750S SPIDER</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
+          neque sapiente praesentium voluptatum, dolor sed ex fuga labore. Illum
+          repudiandae vitae tenetur earum, tempora minus laudantium error a.
+          Eaque, dolore?
+        </p>
+        <a href="">Enquiry Now</a>
+      </div>
+      <div class="banner__bgscreen">
+        <div class="shadow"></div>
+        <div>
+          <span style="--i: 0">
+            <video
+              class="trailer mclaren-1 screen-video active"
+              src="./assets/videos/mclaren-1.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+            <video
+              class="trailer mclaren-2 screen-video"
+              src="./assets/videos/mclaren-2.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+            <video
+              class="trailer mclaren-3 screen-video"
+              src="./assets/videos/mclaren-3.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+            <video
+              class="trailer mclaren-4 screen-video"
+              src="./assets/videos/mclaren-4.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+            <video
+              class="trailer mclaren-5 screen-video"
+              src="./assets/videos/mclaren-5.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+          </span>
+          <span style="--i: 1">
+            <video
+              class="screen-video"
+              src="./assets/videos/trailer-1.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+          </span>
+          <span style="--i: 2">
+            <video
+              class="screen-video"
+              src="./assets/videos/trailer-2.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+          </span>
+          <span style="--i: 3">
+            <video
+              class="screen-video"
+              src="./assets/videos/trailer-3.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+          </span>
+        </div>
+      </div>
+      <div class="banner__bggallery">
+        <div class="carousel">
+          <a class="carousel-item" href="#">
+            <img src="./assets/cars/mclaren-1.jpg" alt="" />
+          </a>
+          <a class="carousel-item" href="#">
+            <img src="./assets/cars/mclaren-2.jpg" alt="" />
+          </a>
+          <a class="carousel-item" href="#">
+            <img src="./assets/cars/mclaren-3.jpeg" alt="" />
+          </a>
+          <a class="carousel-item" href="#">
+            <img src="./assets/cars/mclaren-4.jpeg" alt="" />
+          </a>
+          <a class="carousel-item" href="#">
+            <img src="./assets/cars/mclaren-5.jpeg" alt="" />
+          </a>
+        </div>
+      </div>
+      <ul class="banner__nav">
+        <li><a href="#">SuperCars</a></li>
+        <li><a href="#">GT</a></li>
+        <li><a href="#">Ultimate</a></li>
+        <li><a href="#">Solus GT</a></li>
+        <li><a href="#">Legacy</a></li>
+      </ul>
+    </div>
+  
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".carousel").carousel();
+      });
+    </script>
+  </body>
+</html>
